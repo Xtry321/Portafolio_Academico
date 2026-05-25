@@ -1,0 +1,263 @@
+/* notebook.css -- Cuaderno de apuntes */
+
+#cuaderno {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+/* Layout principal */
+.notebook-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+/* Sidebar de semanas */
+.weeks-sidebar {
+  background: var(--surface-container-low);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+}
+
+.weeks-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--outline-variant);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--on-surface-variant);
+}
+
+.weeks-list { list-style: none; }
+
+.week-item {
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--outline-variant);
+  transition: background .2s, color .2s;
+  font-size: 0.85rem;
+  color: var(--on-surface-variant);
+  border-left: 2px solid transparent;
+}
+.week-item:last-child { border-bottom: none; }
+.week-item:hover { background: var(--surface-container); color: var(--on-surface); }
+.week-item.active {
+  background: rgba(69, 223, 164, 0.08);
+  color: var(--secondary);
+  font-weight: 600;
+  border-left-color: var(--secondary);
+}
+.week-item .week-date {
+  font-size: 0.7rem;
+  color: var(--outline);
+  margin-top: 2px;
+  font-family: var(--font-mono);
+}
+.week-item.active .week-date { color: rgba(69, 223, 164, 0.55); }
+
+/* Area de contenido */
+.notebook-content { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.notebook-week-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--on-surface);
+  margin-bottom: 0.25rem;
+}
+.notebook-week-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--outline);
+}
+
+/* Paneles */
+.notebook-panel {
+  background: var(--surface-container-low);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 0.9rem 1.5rem;
+  border-bottom: 1px solid var(--outline-variant);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.panel-header h3 {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--on-surface-variant);
+  flex: 1;
+}
+
+.panel-body { padding: 1.5rem; }
+
+/* Contenido de notas */
+.note-content {
+  color: var(--on-surface-variant);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+.note-content h2 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--on-surface);
+  margin: 1.25rem 0 0.5rem;
+}
+.note-content h2:first-child { margin-top: 0; }
+.note-content h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 1rem 0 0.4rem;
+  letter-spacing: 0.02em;
+}
+.note-content h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin: 0.75rem 0 0.1rem;
+  letter-spacing: 0.02em;
+}
+.note-content strong { color: var(--on-surface); }
+.note-content code {
+  background: var(--surface-container-high);
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+.note-content ul {
+  padding-left: 1.4rem;
+  margin: 0.5rem 0;
+}
+.note-content li { margin-bottom: 0.3rem; }
+
+/* Bloque de codigo ~~~ ... ~~~ */
+.code-block {
+  position: relative;
+  margin: 1.25rem 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--outline-variant);
+}
+.code-block pre {
+  background: var(--surface-container-lowest);
+  padding: 1.1rem 1.25rem;
+  overflow-x: auto;
+  margin: 0;
+}
+.code-block code {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--primary);
+  background: transparent;
+  padding: 0;
+  line-height: 1.7;
+  white-space: pre;
+}
+.code-lang {
+  display: block;
+  background: var(--surface-container-high);
+  color: var(--outline);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+/* Imagen intercalada dentro del texto */
+.note-figure {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.note-figure img {
+  max-width: 100%;
+  width: auto;
+  max-height: 420px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--outline-variant);
+  object-fit: contain;
+  background: var(--surface-container);
+}
+.note-figure figcaption {
+  font-size: 0.75rem;
+  color: var(--outline);
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+/* Reflexion */
+.reflection-text {
+  background: rgba(164, 201, 255, 0.05);
+  border: 1px solid rgba(164, 201, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  color: var(--tertiary);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  font-style: italic;
+  white-space: pre-wrap;
+}
+
+/* Bibliografia */
+.bib-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--outline-variant);
+  font-size: 0.85rem;
+}
+.bib-entry:last-child { border-bottom: none; }
+
+.bib-num {
+  background: var(--surface-container-high);
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.bib-text { color: var(--on-surface-variant); flex: 1; line-height: 1.55; }
+.bib-link { color: var(--primary); text-decoration: none; }
+.bib-link:hover { text-decoration: underline; }
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--outline);
+}
+.empty-state .empty-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+.empty-state p { font-size: 0.9rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  #cuaderno { padding: 4rem 1.25rem; }
+  .notebook-layout { grid-template-columns: 1fr; }
+  .weeks-sidebar { position: static; }
+}

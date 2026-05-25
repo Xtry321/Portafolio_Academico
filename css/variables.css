@@ -1,0 +1,54 @@
+/* variables.css — Design tokens del portafolio */
+
+:root {
+  /* Paleta surface */
+  --surface:                    #131313;
+  --surface-dim:                #131313;
+  --surface-bright:             #393939;
+  --surface-container-lowest:   #0e0e0e;
+  --surface-container-low:      #1c1b1b;
+  --surface-container:          #201f1f;
+  --surface-container-high:     #2a2a2a;
+  --surface-container-highest:  #353534;
+
+  /* On-surface */
+  --on-surface:         #e5e2e1;
+  --on-surface-variant: #c1c7d3;
+  --inverse-surface:    #e5e2e1;
+  --inverse-on-surface: #313030;
+
+  /* Bordes */
+  --outline:         #8b919d;
+  --outline-variant: #414751;
+
+  /* Primary (azul claro) */
+  --primary:               #a4c9ff;
+  --on-primary:            #00315d;
+  --primary-container:     #60a5fa;
+  --on-primary-container:  #003a6b;
+
+  /* Secondary (verde) */
+  --secondary:              #45dfa4;
+  --on-secondary:           #003825;
+  --secondary-container:    #00bd85;
+  --on-secondary-container: #00452e;
+
+  /* Tertiary */
+  --tertiary:    #b9c8de;
+  --on-tertiary: #233143;
+
+  /* Error */
+  --error:    #ffb4ab;
+  --on-error: #690005;
+
+  /* Tipografías */
+  --font-display: 'DM Serif Display', serif;
+  --font-body:    'Plus Jakarta Sans', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  /* Layout */
+  --nav-h:     64px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+}

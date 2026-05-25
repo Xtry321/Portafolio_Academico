@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio académico de José Eduardo Araujo Champi — Ingeniería de Sistemas." />
+  <title>Portafolio Académico — José Eduardo Araujo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="stylesheet" href="css/notebook.css" />
+
+  <script src="data/proyectos.js"></script>
+  <script src="data/semanas.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-brand" onclick="navigate('home')">Portafolio Académico</div>
+
+  <div class="nav-toggle" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a id="nav-home"      onclick="navigate('home')">Inicio</a></li>
+    <li><a id="nav-sobre-mi" onclick="navigate('sobre-mi')">Sobre mí</a></li>
+    <li><a id="nav-proyectos" onclick="navigate('proyectos')">Proyectos</a></li>
+    <li><a id="nav-cuaderno" onclick="navigate('cuaderno')">Cuaderno</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- PÁGINA: INICIO  (#home) -->
+  <div id="page-home" class="page" style="display:none; animation: fadeUp .45s ease both;">
+    <section id="home">
+
+      <div class="home-bg">
+        <div class="grid-overlay"></div>
+        <div class="home-bg-glow-blue"></div>
+        <div class="home-bg-glow-green"></div>
+      </div>
+
+      <span class="home-label">Portafolio · Ingeniería de Sistemas</span>
+
+      <h1 class="home-name">
+        José Eduardo<br><span>Araujo Champi</span>
+      </h1>
+
+      <div class="typewriter-wrap">
+        <span id="typewriter-text"></span><span class="cursor"></span>
+      </div>
+
+      <div class="home-cta">
+        <button class="btn-primary" onclick="navigate('sobre-mi')">Conocerme más</button>
+        <button class="btn-outline" onclick="navigate('proyectos')">Ver proyectos</button>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- PÁGINA: SOBRE MÍ  (#sobre-mi) -->
+  <div id="page-sobre-mi" class="page" style="display:none; animation: fadeUp .45s ease both;">
+    <section id="sobre-mi">
+
+      <span class="section-tag">// sobre mí</span>
+      <h2 class="section-title">El desarrollador<br>detrás del código.</h2>
+
+      <div class="about-grid">
+
+        <!-- Sidebar de habilidades -->
+        <div class="about-sidebar">
+          <div class="skill-group">
+            <h4>Frontend</h4>
+            <div class="skill-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Backend</h4>
+            <div class="skill-tags">
+              <span class="tag">PHP</span>
+              <span class="tag">Laravel</span>
+              <span class="tag">MySQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Herramientas</h4>
+            <div class="skill-tags">
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Otros</h4>
+            <div class="skill-tags">
+              <span class="tag">Ciberseguridad</span>
+              <span class="tag">Inglés B1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="about-text">
+          <p>
+            Soy <strong>José Eduardo Araujo Champi</strong>, estudiante de Ingeniería de Sistemas
+            apasionado por el desarrollo de software y la creación de soluciones tecnológicas innovadoras.
+          </p>
+          <p>
+            Me interesa especialmente el desarrollo web y backend, por lo que he fortalecido mis
+            conocimientos en tecnologías como HTML, CSS, JavaScript, PHP, Laravel y gestión de bases
+            de datos MySQL.
+          </p>
+          <p>
+            Además, cuento con conocimientos en Git, desarrollo responsivo y fundamentos de
+            ciberseguridad, complementados con un nivel de inglés intermedio que me permite acceder
+            a documentación y recursos técnicos internacionales.
+          </p>
+          <p>
+            Realicé prácticas en la <span class="hl">Oficina de Tecnología de la UNCP</span>, donde
+            reforcé mis habilidades técnicas y de trabajo en equipo en entornos reales.
+          </p>
+          <p>
+            Actualmente, continúo desarrollando proyectos y ampliando mis conocimientos con el objetivo
+            de crecer profesionalmente en el área de desarrollo de software y contribuir con soluciones
+            eficientes, modernas y funcionales.
+          </p>
+          <div class="highlight-card">
+            <p>"Mi objetivo es crecer como desarrollador y construir soluciones que aporten
+            <strong>valor real</strong> a quienes las usan."</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- PÁGINA: PROYECTOS  (#proyectos) -->
+  <div id="page-proyectos" class="page" style="display:none; animation: fadeUp .45s ease both;">
+    <section id="proyectos">
+
+      <span class="section-tag">// proyectos</span>
+      <h2 class="section-title">Lo que he construido.</h2>
+
+      <div class="projects-grid" id="projects-grid"></div>
+
+    </section>
+  </div>
+
+  <!-- PÁGINA: CUADERNO  (#cuaderno) -->
+  <div id="page-cuaderno" class="page" style="display:none; animation: fadeUp .45s ease both;">
+    <section id="cuaderno">
+
+      <span class="section-tag">// cuaderno de apuntes</span>
+      <h2 class="section-title">Mis anotaciones.</h2>
+
+      <div class="notebook-layout">
+
+        <div class="weeks-sidebar">
+          <div class="weeks-header">Semanas</div>
+          <ul class="weeks-list" id="weeks-list"></ul>
+        </div>
+
+        <div class="notebook-content" id="notebook-content">
+          <div class="empty-state">
+            <div class="empty-icon">📓</div>
+            <p>Cargando semanas…</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+</main>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+<script src="js/proyectos.js"></script>
+<script src="js/notebook.js"></script>
+
+<style>
+  .page.visible { display: block !important; }
+</style>
+
+</body>
+</html>

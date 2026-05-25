@@ -1,0 +1,92 @@
+/* nav.css — Barra de navegación */
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: rgba(19, 19, 19, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--outline-variant);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  z-index: 1000;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--primary);
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: opacity .2s;
+  user-select: none;
+}
+.nav-brand:hover { opacity: .75; }
+
+.nav-links {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: var(--on-surface-variant);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: color .2s, background .2s;
+  cursor: pointer;
+  display: block;
+}
+.nav-links li a:hover {
+  color: var(--on-surface);
+  background: var(--surface-container-high);
+}
+.nav-links li a.active {
+  color: var(--primary);
+  background: rgba(164, 201, 255, 0.1);
+}
+
+/* ─── Hamburger (móvil) ─── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--on-surface);
+  border-radius: 2px;
+  transition: transform .3s, opacity .3s;
+}
+
+@media (max-width: 640px) {
+  nav { padding: 0 1.25rem; }
+
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    background: var(--surface-container-low);
+    border-bottom: 1px solid var(--outline-variant);
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    gap: 0.25rem;
+    transform: translateY(-110%);
+    transition: transform .3s ease;
+  }
+  .nav-links.open { transform: translateY(0); }
+
+  .nav-links li a { font-size: 1rem; padding: 10px 14px; }
+}
