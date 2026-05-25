@@ -1,75 +1,38 @@
-/**
- * ============================================================
- * data/proyectos.js  —  AQUÍ agregas tus proyectos de GitHub
- * ============================================================
- *
- * Campos de cada proyecto:
- *
- *   titulo      (string)  — Nombre del proyecto.
- *   descripcion (string)  — Resumen breve de qué hace.
- *   tecnologias (array)   — Lista de tecnologías usadas.
- *   icono       (string)  — Emoji representativo (opcional).
- *   github      (string)  — URL completa al repositorio.
- *                           Pon "#" si aún no está publicado.
- *   destacado   (boolean) — true = muestra borde azul especial.
- *
- * ============================================================
- */
-
 const proyectos = [
 
   {
-    titulo:      "Proyecto Web 01",
-    descripcion: "Descripción pendiente. Aquí irá el resumen de qué hace este proyecto, qué problema resuelve y qué aprendizajes dejó.",
+    titulo:      "Practica-semana-4-Desarrollo-Web",
+    descripcion: "Landing page de NetGuard IDS — Sistema de Detección de Intrusiones",
     tecnologias: ["HTML", "CSS", "JavaScript"],
     icono:       "🌐",
-    github:      "https://github.com/tu-usuario/repo-01",
+    github:      "https://github.com/Xtry321/Practica-semana-4-Desarrollo-Web.git",
     destacado:   false
   },
 
   {
-    titulo:      "Proyecto Backend 02",
-    descripcion: "Descripción pendiente. Aquí irá el resumen de qué hace este proyecto, qué problema resuelve y qué aprendizajes dejó.",
-    tecnologias: ["PHP", "Laravel", "MySQL"],
-    icono:       "🛠️",
-    github:      "https://github.com/tu-usuario/repo-02",
+    titulo:      "Practica-semana-4-CANVAS",
+    descripcion: "Desarrollo de una práctica utilizando la etiquta canvas para animación.",
+    tecnologias: ["HTML", "CSS", "JavaScript"],
+    icono:       "🌐",
+    github:      "https://github.com/Xtry321/Practica-semana-4-CANVAS.git",
     destacado:   false
   },
 
   {
-    titulo:      "Proyecto Base de Datos 03",
-    descripcion: "Descripción pendiente. Aquí irá el resumen de qué hace este proyecto, qué problema resuelve y qué aprendizajes dejó.",
-    tecnologias: ["MySQL", "PHP"],
-    icono:       "🗄️",
-    github:      "https://github.com/tu-usuario/repo-03",
+    titulo:      "Practica-1-semana-5-Desarrollo-Web",
+    descripcion: "Desarrollo de un SPA con React",
+    tecnologias: ["HTML", "CSS", "JavaScript", "React"],
+    icono:       "🌐",
+    github:      "https://github.com/Xtry321/Practica-1-semana-5-Desarrollo-Web.git",
     destacado:   false
   },
 
   {
-    titulo:      "Proyecto Seguridad 04",
-    descripcion: "Descripción pendiente. Aquí irá el resumen de qué hace este proyecto, qué problema resuelve y qué aprendizajes dejó.",
-    tecnologias: ["Python", "Ciberseguridad"],
-    icono:       "🔐",
-    github:      "#",
+    titulo:      "Sorteos_ruleta_equipos",
+    descripcion: "Desarrollo de una práctica en equipo mediante sobre una pa´gina que sirva para realizar sorteos individuales y en equipo",
+    tecnologias: ["HTML", "CSS", "JavaScript"],
+    icono:       "🌐",
+    github:      "https://github.com/Xtry321/Sorteos_ruleta_equipos.git",
     destacado:   false
   },
-
-  {
-    titulo:      "Proyecto Responsivo 05",
-    descripcion: "Descripción pendiente. Aquí irá el resumen de qué hace este proyecto, qué problema resuelve y qué aprendizajes dejó.",
-    tecnologias: ["HTML", "CSS", "Responsive"],
-    icono:       "📱",
-    github:      "#",
-    destacado:   false
-  },
-
-  {
-    titulo:      "Proyecto UNCP 06",
-    descripcion: "Proyecto desarrollado durante las prácticas en la Oficina de Tecnología de la UNCP. Detalles por completar.",
-    tecnologias: ["Laravel", "MySQL", "Git"],
-    icono:       "⚙️",
-    github:      "#",
-    destacado:   true
-  }
-
 ];
