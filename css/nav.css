@@ -1,5 +1,3 @@
-/* nav.css — Barra de navegación */
-
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -52,7 +50,7 @@ nav {
   background: rgba(164, 201, 255, 0.1);
 }
 
-/* ─── Hamburger (móvil) ─── */
+/* Hamburger (móvil) */
 .nav-toggle {
   display: none;
   flex-direction: column;

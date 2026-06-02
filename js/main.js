@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-/* ─── TYPEWRITER ──────────────────────────────────────────── */
+/* TYPEWRITER */
 const PHRASES = [
   'Desarrollador de software en formación.',
   'Apasionado por la tecnología y la innovación.',

@@ -1,34 +1,6 @@
-/**
- * ============================================================
- * data/semanas.js  —  AQUÍ agregas tus apuntes de cada semana
- * ============================================================
- *
- * INSTRUCCIONES:
- * Cada objeto dentro del array "semanas" es una semana.
- * Campos disponibles:
- *
- *   titulo   (string)  — Nombre de la semana.
- *   fecha    (string)  — Fecha en formato "DD/MM/YYYY".
- *   notas    (string)  — Apuntes en texto plano.
- *                        Puedes usar saltos de línea con \n.
- *   imagenes (array)   — Lista de rutas a imágenes dentro de
- *                        la carpeta assets/img/.
- *                        Ejemplo: ["assets/img/diagrama1.png"]
- *   reflexion (string) — Tu reflexión de la semana.
- *   bibliografia (array) — Lista de referencias o URLs.
- *
- * AGREGAR UNA SEMANA NUEVA:
- *   1. Copia el bloque de ejemplo al final del array.
- *   2. Rellena los campos con tu información.
- *   3. Guarda el archivo.
- *   4. Abre index.html en el navegador (o haz push a GitHub Pages).
- *
- * ============================================================
- */
-
 const semanas = [
 
-  /* ── Semana 1 ─────────────────────────────────────────── */
+  /* Semana 1 */
   {
     titulo: "Semana 1",
     fecha:  "07/04/2026",
@@ -92,7 +64,7 @@ Combina conocimientos de frontend y backend para desarrollar aplicaciones comple
     ]
   },
 
-  /* ── Semana 2 */
+  /* Semana 2 */
   {
     titulo: "Semana 2",
     fecha:  "14/04/2026",
@@ -161,7 +133,7 @@ La infraestructura de internet está compuesta por:
     ]
   },
 
-  /* ── Semana 3  */
+  /* Semana 3  */
   {
     titulo: "Semana 3",
     fecha:  "21/04/2026",
@@ -229,7 +201,7 @@ Se enfoca en el diseño visual: colores, botones, tipografía y distribución.
   },
 
 
-  /* ── Semana 4  */
+  /* Semana 4  */
   {
     titulo: "Semana 4",
     fecha:  "28/04/2026",
@@ -293,7 +265,7 @@ Funciones que conservan acceso a variables de su contexto externo incluso despu�
     ]
   },
 
-/* ── Semana 5  */
+/* Semana 5  */
   {
     titulo: "Semana 5",
     fecha:  "05/05/2026",
@@ -356,7 +328,7 @@ Existen múltiples enfoques para aplicar estilos en una aplicación React, cada 
     ]
   },
   
-  /* ── Semana 6  */
+  /* Semana 6  */
   {
     titulo: "Semana 6",
     fecha:  "12/05/2026",
@@ -429,7 +401,7 @@ Es una librería utilizada para realizar solicitudes HTTP de manera sencilla.
     ]
   },
 
-  /* ── Semana 7  */
+  /* Semana 7  */
   {
     titulo: "Semana 7",
     fecha:  "19/05/2026",

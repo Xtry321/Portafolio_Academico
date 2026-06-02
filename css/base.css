@@ -1,5 +1,3 @@
-/* base.css — Reset y estilos globales */
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -22,7 +20,7 @@ a { color: inherit; text-decoration: none; }
 
 img { display: block; max-width: 100%; }
 
-/* ─── Botones reutilizables ─── */
+/* Botones reutilizables */
 .btn-primary {
   background: var(--primary);
   color: var(--on-primary);
@@ -87,16 +85,16 @@ img { display: block; max-width: 100%; }
   margin-bottom: 3rem;
 }
 
-/* ─── Animación de entrada ─── */
+/* Animación de entrada */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ─── Page wrapper ─── */
+/* Page wrapper */
 main { padding-top: var(--nav-h); min-height: 100vh; }
 
-/* ─── Responsive helpers ─── */
+/* Responsive helpers */
 @media (max-width: 768px) {
   .section-title { margin-bottom: 2rem; }
 }

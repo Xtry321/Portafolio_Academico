@@ -47,7 +47,7 @@ function seleccionarSemana(idx) {
   renderContenidoSemana(semanas[idx]);
 }
 
-/* ─── Render de una semana ─────────────────────────────────── */
+/* Render de una semana */
 function renderContenidoSemana(semana) {
   const area = document.getElementById('notebook-content');
   if (!area || !semana) return;
@@ -112,7 +112,7 @@ function renderContenidoSemana(semana) {
   area.innerHTML = html;
 }
 
-/* ─── Render de notas: divide en segmentos texto / img / código ─── */
+/* Render de notas: divide en segmentos texto / img / código */
 function renderNotas(text) {
   if (!text) return '';
 
@@ -142,7 +142,7 @@ function renderNotas(text) {
       return;
     }
 
-    // ── Abrir bloque de código
+    // Abrir bloque de código
     const codeMatch = line.match(CODE_START);
     if (codeMatch) {
       if (textBuf.length) {
@@ -154,7 +154,7 @@ function renderNotas(text) {
       return;
     }
 
-    // ── Imagen intercalada [img: ruta]
+    // Imagen intercalada [img: ruta]
     const imgMatch = line.match(IMG_RE);
     if (imgMatch) {
       if (textBuf.length) {
@@ -175,7 +175,7 @@ function renderNotas(text) {
   // Volcar lo que quede
   if (textBuf.length) segments.push({ type: 'text', content: textBuf.join('\n') });
 
-  // ── Renderizar cada segmento
+  // Renderizar cada segmento
   return segments.map(seg => {
     if (seg.type === 'img') {
       return `
@@ -210,7 +210,7 @@ function renderNotas(text) {
   }).join('');
 }
 
-/* ─── Helpers ─────────────────────────────────────────────── */
+/* Helpers */
 function escapeHtml(str) {
   return String(str)
     .replace(/&/g,  '&amp;')
